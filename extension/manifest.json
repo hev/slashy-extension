@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Slashy (prototype)",
+  "name": "Slashy (POC)",
   "version": "0.1.0",
-  "description": "Soft-redirects gmail.com to Slashy and gives you a global launcher. Prototype.",
+  "description": "Soft-redirects gmail.com to Slashy and gives you a global launcher.",
   "permissions": ["storage"],
   "host_permissions": ["https://mail.google.com/*"],
   "background": {
