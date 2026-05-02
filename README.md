@@ -6,7 +6,7 @@ A small browser extension that puts [Slashy](https://slashy.com) one keystroke a
 
 - **Soft redirect from Gmail.** When you open `mail.google.com`, a small banner appears at the top of the page: *"Open this inbox in Slashy?"* You can open once, set it to always redirect, or dismiss for the session.
 - **Address-bar launcher.** Type `slashy` in the address bar, hit space (or tab), and any text you type after that opens in Slashy as a query.
-- **Global hotkey.** Press `⌘⇧L` (Mac) or `Ctrl+Shift+L` (Windows/Linux) from any tab to open Slashy.
+- **Global hotkey.** Press `⌥⇧L` (Mac) or `Alt+Shift+L` (Windows/Linux) from any tab to open Slashy.
 - **Toolbar icon.** Clicking the extension icon also opens Slashy.
 - **Preferences.** A tiny options page lets you switch the Gmail behavior between *Ask*, *Always redirect*, and *Never*.
 
@@ -27,12 +27,19 @@ The extension appears in the toolbar as "Slashy (POC)".
 
 | Action | How |
 | --- | --- |
-| Open Slashy from any tab | `⌘⇧L` / `Ctrl+Shift+L` |
+| Open Slashy from any tab | `⌥⇧L` / `Alt+Shift+L` |
 | Search Slashy from the address bar | `slashy <space> your query` |
 | Open Slashy via toolbar | Click the extension icon |
 | Change Gmail redirect behavior | Right-click toolbar icon → Options |
 
 If the hotkey conflicts with another extension, rebind it at `chrome://extensions/shortcuts`.
+
+## Known issues
+
+- **Address-bar launcher (`slashy <query>`) is flaky.** Chrome's omnibox keyword feature only kicks in once Chrome treats `slashy` as a registered keyword search. If typing `slashy` in the address bar just runs a Google search instead of showing the *"Ask Slashy:"* prompt, do one of the following:
+  - Type `slashy` and then press `Tab` (not space) to force keyword mode.
+  - Or open `chrome://settings/searchEngines`, find **Slashy** under *Site search*, and click **Activate**.
+  - The hotkey and toolbar icon are reliable workarounds while this is being sorted.
 
 ## Permissions
 

@@ -22,8 +22,8 @@
   "commands": {
     "open-slashy": {
       "suggested_key": {
-        "default": "Ctrl+Shift+L",
-        "mac": "Command+Shift+L"
+        "default": "Alt+Shift+L",
+        "mac": "Alt+Shift+L"
       },
       "description": "Open Slashy"
     }
