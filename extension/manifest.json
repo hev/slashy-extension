@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Slashy (prototype)",
+  "version": "0.1.0",
+  "description": "Soft-redirects gmail.com to Slashy and gives you a global launcher. Prototype.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "omnibox": {
+    "keyword": "slashy"
+  },
+  "commands": {
+    "open-slashy": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Open Slashy"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "action": {
+    "default_title": "Open Slashy"
+  }
+}
